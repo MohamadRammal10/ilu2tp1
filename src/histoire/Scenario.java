@@ -8,6 +8,8 @@ import villagegaulois.Village;
 import villagegaulois.VillageSansChefException;
 
 public class Scenario {
+	
+	// Pour changer le commentaire
 
 	public static void main(String[] args) {
 		Village village = new Village("le village des irréductibles", 10, 5);
