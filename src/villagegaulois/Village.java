@@ -2,6 +2,7 @@ package villagegaulois;
 
 import personnages.Chef;
 import personnages.Gaulois;
+import villagegaulois.VillageSansChefException;
 
 public class Village {
 	private String nom;
@@ -15,6 +16,7 @@ public class Village {
 		villageois = new Gaulois[nbVillageoisMaximum];
 		this.marche = new Marche(nbEtal);
 	}
+	
 
 	public String getNom() {
 		return nom;
@@ -44,7 +46,10 @@ public class Village {
 		return null;
 	}
 
-	public String afficherVillageois() {
+	public String afficherVillageois() throws VillageSansChefException {
+		if (chef == null) {
+			throw new VillageSansChefException("Il n'y a pas de chef pour le village !!");
+		}
 		StringBuilder chaine = new StringBuilder();
 		if (nbVillageois < 1) {
 			chaine.append("Il n'y a encore aucun habitant au village du chef "
