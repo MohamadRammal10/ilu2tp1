@@ -4,7 +4,6 @@ import personnages.Chef;
 import personnages.Gaulois;
 import villagegaulois.VillageSansChefException;
 
-// Pour changer le commentaire
 public class Village {
 	private String nom;
 	private Chef chef;

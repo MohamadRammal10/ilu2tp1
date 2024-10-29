@@ -2,8 +2,6 @@ package villagegaulois;
 
 import personnages.Gaulois;
 
-// Pour changer le commentaire
-
 public class Etal {
 	private Gaulois vendeur;
 	private String produit;
